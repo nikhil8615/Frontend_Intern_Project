@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import Home from "./Pages/Home/Home";
+import { Route, Routes } from "react-router-dom";
+
+import FeaturesPage from "./Pages/Product Feature/ProductF";
+
+import ProductFeatures from "./Pages/Product Feature/ProductF";
+
+import SchedulingAndRescheduling from "./Pages/SchedulingAndRescheduling/SchedulingAndRescheduling";
+import ManagingPatients from "./Pages/ManagingPatients/ManagingPatients";
+import InvoicingAndPaymentTracking from "./Pages/InvoicingAndPaymentTracking/InvoicingAndPaymentTracking";
+import ReportingTherapy from "./Pages/ReportingTherapy/ReportingTherapy";
+import HandlingCancellations from "./Pages/HandlingCancellations/HandlingCancellations";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/productf" element={<FeaturesPage />} />
+        <Route
+          path="/features/scheduling-and-rescheduling"
+          element={<SchedulingAndRescheduling />}
+        />
+        <Route
+          path="/features/managing-patient-records"
+          element={<ManagingPatients />}
+        />
+        <Route
+          path="/features/invoicing-and-payment-tracking"
+          element={<InvoicingAndPaymentTracking />}
+        />
+        <Route
+          path="/features/reporting-on-therapy-sessions"
+          element={<ReportingTherapy />}
+        />
+        <Route
+          path="/features/handling-session-cancellations"
+          element={<HandlingCancellations />}
+        />
+      </Routes>
+    </>
   );
-}
+};
 
 export default App;

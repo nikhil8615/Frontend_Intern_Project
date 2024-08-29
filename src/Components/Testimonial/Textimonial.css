@@ -1,0 +1,129 @@
+#testimonials {
+  background: #f4f7f9;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 6px;
+  background-color: #007bff;
+  margin: 20px auto 0;
+  border-radius: 3px;
+}
+
+.testimonial-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.testimonial {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin: 0 15px;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  font-style: italic;
+  overflow: hidden;
+}
+
+.testimonial p {
+  font-size: 1.25rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.testimonial cite {
+  display: block;
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #007bff;
+  font-weight: 600;
+}
+
+.testimonial:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.testimonial-nav .nav-button {
+  background: #007bff;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.testimonial-nav .nav-button:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .testimonial {
+    padding: 30px;
+    max-width: 90%;
+  }
+
+  .testimonial p {
+    font-size: 1rem;
+  }
+
+  .testimonial cite {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-nav .nav-button {
+    width: 35px;
+    height: 35px;
+    font-size: 1.25rem;
+  }
+}
