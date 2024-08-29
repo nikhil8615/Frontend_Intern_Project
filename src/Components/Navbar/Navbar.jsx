@@ -59,7 +59,9 @@ const Navbar = ({ setShowLogin }) => {
         </div>
         <div className="nav_side">
           <button className="demo_request">Request a Demo</button>
-          <button onClick={() => setShowLogin(true)}>Sign In</button>
+          <button className="demo_request" onClick={() => setShowLogin(true)}>
+            Sign In
+          </button>
         </div>
       </div>
     </div>
